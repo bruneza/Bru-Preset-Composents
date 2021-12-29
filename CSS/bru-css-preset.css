@@ -1,0 +1,111 @@
+/*** UNFORMAT & UNSTYLE **/
+
+/*** Margin Zero ***/
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+/*** Unformat Media **/
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  vertical-align: middle;
+}
+
+/*** Unformat Typo ***/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*** Unstyle List ***/
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*** GENERAL - COLOR ***/
+  	.bg-gradient-black{
+  		background: rgb(29,29,29);
+		background: radial-gradient(circle, rgba(29,29,29,1) 0%, rgba(50,50,50,1) 50%, rgba(29,29,29,1) 100%);
+		color: #FFFFFF;
+  	}
+  	/*** GENERAL - GRID  ***/
+  	.container-1400{
+  		display: grid;
+    	grid-template-columns: repeat(12, minmax(0, 1fr));
+  		max-width: 1400px;
+  	}
+  	.bcol-5{
+  		grid-column: span 5 / span 5;
+  	}
+  	.bcol-3 {
+    grid-column: span 3 / span 3;
+	}
+	.bcol-2 {
+    grid-column: span 2 / span 2;
+	}
+	/*** GENERAL - SPACING  ***/
+  	.pad-20-y{
+  		padding-top: 20px;
+  		padding-bottom: 20px; 
+  	}
+  	.pad-15-y{
+  		padding-top: 15px;
+  		padding-bottom: 15px; 
+  	}
+  	.margin-x5 {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+  	/*** GENERAL - ALIGNMENT ***/
+  	.flex {
+    display: flex;
+}
+  	.inline-flex {
+    display: inline-flex;
+	}
+  	.center-content{
+  		display: flex;
+  		justify-content: center;
+  		align-items: center;
+
+  	}
+  	.center-content-x{
+  		display: flex;
+  		justify-content: center;
+  	}
+/*** ICON STYLES ***/
+  	.square-icon-1{
+  		display: flex;
+  		border: 1px solid #ffffff;
+  		border-radius: 50%;
+  		width: 35px;
+  		height: 35px;
+  		justify-content: center;
+  		align-items: center;
+  	}
