@@ -116,22 +116,34 @@ ul {
     .inline-flex {
     display: inline-flex;
   }
-    .center-content{
-      display: flex;
-      justify-content: center;
-      align-items: center;
+ .content-all-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    }
-    .center-content-y{
-      display: flex;
-      align-items: center;
+}
 
-    }
-    
-    .center-content-x{
-      display: flex;
-      justify-content: center;
-    }
+.content-middle {
+    display: flex;
+    align-items: center;
+
+}
+
+.content-bottom {
+    display: flex;
+    align-items: bottom;
+
+}
+
+.content-center {
+    display: flex;
+    justify-content: center;
+}
+
+.content-right {
+    display: flex;
+    justify-content: flex-end;
+}
 /*** ICON STYLES ***/
     .square-icon-1{
       display: flex;
