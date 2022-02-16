@@ -79,8 +79,24 @@ ul {
       grid-column: span 6 / span 6;
     }
   
- 
+ /**** GENERAL- GRID WITH FLEX **/
+.inline-row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: start;
+    align-items: center;
+}
+
+.inline-row > div {
+    flex: 1 0 auto;
+}
+
   /*** GENERAL - SPACING  ***/
+    .col {
+        padding: 10px;
+    }
     .pad-20-y{
       padding-top: 20px;
       padding-bottom: 20px; 
