@@ -53,6 +53,42 @@ ul {
     background: radial-gradient(circle, rgba(29,29,29,1) 0%, rgba(50,50,50,1) 50%, rgba(29,29,29,1) 100%);
     color: #FFFFFF;
     }
+
+/**** Container ***/
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+/* RESPONSIVE - SMALL  */
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+/* RESPONSIVE - MEDIUM  */
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+/* RESPONSIVE - LARGE  */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+/* RESPONSIVE - xLARGE  */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+}
     /*** GENERAL - GRID  ***/
     .container-1400{
       display: grid;
