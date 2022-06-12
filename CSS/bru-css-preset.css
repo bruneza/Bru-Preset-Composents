@@ -96,6 +96,10 @@ ul {
       max-width: 1400px;
       margin: auto;
     }
+ .brow{
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+    }
  .bcol-1 {
     grid-column: span 1 / span 1;
   }
