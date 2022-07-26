@@ -21,35 +21,15 @@
     left: 0;
   }
 
-  .pop-link-box iframe{
-  	width: 70%;
-  	height: 70%;
-  	border:0;
-  }
+
   </style>
 </head>
-<body onload="bruPop(event)">
+<body>
 
 <div class="pop-section">
-<a href="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15947.255786793414!2d29.9769908!3d-2.2236442!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19c3518cf2c5247f%3A0x957af3a6286809f1!2sKinazi%20Cassava%20Plant!5e0!3m2!1sen!2srw!4v1658844480353!5m2!1sen!2srw" class="bru-poplink" target-id="" >Link</a>
+<a href="https://poetikwolf.com/" class="bru-poplink" target-id="" >Link</a>
 </div>
 
-<script>
-
-	function bruPop (){
-		// event.preventDefault();
-		let event = document.querySelector(".bru-poplink");
-		let targetLink = event.href;
-    let pframe= document.createElement('iframe');
-	pframe.setAttribute('src', `${targetLink}`)
-	pframe.innerHTML = 'allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"';
-
-	let popBox = document.createElement('div');
-	popBox.classList.add("pop-link-box");
-	popBox.appendChild(pframe);
-
-	event.parentNode.appendChild(popBox);
-	}
-</script>
+<script src="pop-iframe.js" async></script>
 </body>
 </html>
