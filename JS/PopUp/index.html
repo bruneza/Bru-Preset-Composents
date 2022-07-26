@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Popup Link</title>
+  
+  <style>
+  .pop-link-box{
+    position:absolute;
+    background: #0000004a;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width:100%;
+    height:100%;
+    color: #FFFFFF;
+    z-index: 999;
+  }
+  </style>
+</head>
+<body>
+<div class="pop-section">
+<a href="https://www.w3schools.com/" class="bru-poplink" target-id="" onclick="bruPop(event)">Link</a>
+</div>
+
+<script>
+	function bruPop (event){
+		event.preventDefault();
+		let targetLink = event.target.href;
+    let popBox = '<div class="pop-link-box"> hello </div>';
+		event.target.insertAdjacentHTML("afterend", popBox);
+	}
+</script>
+</body>
+</html>
