@@ -4,32 +4,23 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Popup Link</title>
-  
-  <style>
-  .pop-link-box{
-    position:absolute;
-    background: #0000004a;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    width:100%;
-    height:100vh;
-    color: #FFFFFF;
-    z-index: 999;
-    top: 0;
-    left: 0;
-  }
-
-
-  </style>
 </head>
-<body>
+<body onload="bruPop ('.bru-poplink', null);">
 
 <div class="pop-section">
-<a href="https://poetikwolf.com/" class="bru-poplink" target-id="" >Link</a>
+<a href="link:https://poetikwolf.com/why-i-am-a-humanist/" class="bru-poplink">Link</a>
 </div>
 
-<script src="pop-iframe.js" async></script>
+<script type = "text/javascript" src="pop-iframe.js" async></script>
+
+<!-- <script>
+
+	window.addEventListener("click",function(){
+		window.console.log('loaded');
+		bruPop (".bru-poplink", null);
+
+	})
+
+</script> -->
 </body>
 </html>
