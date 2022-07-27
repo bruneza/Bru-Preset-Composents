@@ -16,4 +16,6 @@
   .popup-box{
   	width: 70%;
   	height: 70%;
+    box-shadow: 0 0 10px 1px #0000003a;
+    padding: 10px;
   }
