@@ -9,16 +9,15 @@ function validURL(str) {
 }
 
 function popStyle(){
-	var head = document.getElementsByTagName('HEAD')[0];
-        // Create new link Element
-        var link = document.createElement('link');
-        // set the attributes for link element
-        link.rel = 'stylesheet';
-        link.type = 'text/css';
-        link.href = 'style.css';
-        head.appendChild(link);
+	var link = document.createElement('link');
+	link.setAttribute('rel', 'stylesheet');
+	link.setAttribute('type', 'text/css');
+	link.setAttribute('href', 'https://raw.githubusercontent.com/bruneza/Bru-Preset-Components/88d3db01d47f352633e351359d9879661fa17adb/JS/PopUp/styles.css');
+	document.getElementsByTagName('head')[0].appendChild(link);
+
 }
 function bruPop (targetIdentifier, action){
+	// popStyle();
 	// targetElement.preventDefault();
 
 	let targetElement = document.querySelector(targetIdentifier);
@@ -55,18 +54,18 @@ function bruPop (targetIdentifier, action){
 
 	switch (targettype) {
 		case "link:":
-			if(!validURL(targetContent)){
-				window.console.log('Invalid Link.');
-				return false;
-			}
+		if(!validURL(targetContent)){
+			window.console.log('Invalid Link.');
+			return false;
+		}
 
-			popFrame.setAttribute('src', `${targetContent}`);
-			popBox.appendChild(popFrame);
+		popFrame.setAttribute('src', `${targetContent}`);
+		popBox.appendChild(popFrame);
 
-			break;
+		break;
 		default:
-			window.console.log('type of content not found.');
-			break;
+		window.console.log('type of content not found.');
+		break;
 	}
 
 	popContainer.appendChild(popBox);
