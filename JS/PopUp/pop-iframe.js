@@ -9,22 +9,27 @@ function validURL(str) {
 }
 
 function popStyle(){
+
 	var link = document.createElement('link');
 	link.setAttribute('rel', 'stylesheet');
 	link.setAttribute('type', 'text/css');
-	link.setAttribute('href', 'https://raw.githubusercontent.com/bruneza/Bru-Preset-Components/88d3db01d47f352633e351359d9879661fa17adb/JS/PopUp/styles.css');
+	link.setAttribute('href', 'https://bruneza.github.io/Bru-Preset-Components/JS/PopUp/style.css?v=2');
 	document.getElementsByTagName('head')[0].appendChild(link);
 
 }
 function bruPop (targetIdentifier, action){
-	// popStyle();
-	// targetElement.preventDefault();
 
+	popStyle(); //Load style file
+
+	//declare necessary variables
 	let targetElement = document.querySelector(targetIdentifier);
+	targetElement.preventDefault;
+
 	let target = targetElement.href;
 	let targetContent;
 	let targettype;
 
+	//create POP containers
 	let popContainer = document.createElement('div');
 	popContainer.classList.add("popup-container");
 
@@ -35,24 +40,46 @@ function bruPop (targetIdentifier, action){
 	popFrame.style.cssText = 'width: 100%; height: 100%; border:0;';
 	popFrame.innerHTML = 'allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"';
 
-
+	//array for types of content that can be popped
 	let types = ['id:','class:',,'map-location:','link:'];
 
+	//verify if target is among the types
 	types.forEach( function(t) {
 		if(target.includes(t)){
 			targettype = t;
 			targetContent = target.replace(t,'');
+			if(t == "id:")
+				targetContent = target.replace(t,'#');
+			if(t == "class:")
+				targetContent = target.replace(t,'.');
 		}
 	});
-
-	window.console.log("Content: "+ targetContent + " Type: " + targettype);
-
 	if(!targettype){
 		window.console.log('Invalid Option ');
 		return false;
 	}
 
+	// window.console.log("Content: "+ targetContent + " Type: " + targettype + window.location.pathname);
+
+
+	// Handle each type
 	switch (targettype) {
+		//PopUp for ID
+		case "id:":
+		case "class:":
+
+		popContent =document.querySelector(targetContent);
+		popBox.appendChild(popContent);
+		break;
+		
+		//PopUp for MAPS
+		case "map-location:":
+
+		popFrame.setAttribute('src', `https://maps.google.com/maps?q=${encodeURI(targetContent)}&t=m&z=15&output=embed&iwloc=near`);
+		popBox.appendChild(popFrame);
+		break;
+
+		//PopUp for Links
 		case "link:":
 		if(!validURL(targetContent)){
 			window.console.log('Invalid Link.');
@@ -63,6 +90,7 @@ function bruPop (targetIdentifier, action){
 		popBox.appendChild(popFrame);
 
 		break;
+
 		default:
 		window.console.log('type of content not found.');
 		break;
@@ -73,11 +101,11 @@ function bruPop (targetIdentifier, action){
 	targetElement.parentNode.appendChild(popContainer);
 	window.console.log(popContainer);
 
-	/*
-	popBox.addEventListener("click", function() {
-		event.parentNode.removeChild(popBox);
+
+	popContainer.addEventListener("click", function() {
+		targetElement.parentNode.removeChild(popContainer);
 	}
 	);
-	*/
+
 
 }
