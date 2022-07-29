@@ -13,7 +13,7 @@ function popStyle(){
 	var link = document.createElement('link');
 	link.setAttribute('rel', 'stylesheet');
 	link.setAttribute('type', 'text/css');
-	link.setAttribute('href', 'https://bruneza.github.io/Bru-Preset-Components/JS/PopUp/style.css');
+	link.setAttribute('href', 'https://bruneza.github.io/Bru-Preset-Components/JS/PopUp/style.css?v=2');
 	document.getElementsByTagName('head')[0].appendChild(link);
 
 }

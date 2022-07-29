@@ -14,8 +14,9 @@
   }
 
   .popup-box{
-  	width: 70%;
-  	height: 70%;
+    background-color:#FFFFFF;
+    width: 70%;
+    height: 70%;
     box-shadow: 0 0 10px 1px #0000003a;
-    padding: 5px;
+    padding: 10px;
   }
