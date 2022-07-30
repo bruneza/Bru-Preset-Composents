@@ -1,1 +1,41 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Popup Link</title>
+</head>
+<body onload="bruPop ('.bru-poplink', null);">
+<style>
+.popped-div{
+  	color: #000000;
+  	background: #ffffff;
+  	display: none;
+
+  }
+
+</style>
+
+<div class="pop-section">
+<a href="class:popped-div" class="bru-poplink">Link</a>
+</div>
+
+
+<div class="popped-div">
+<h1>I'm popped!!</h1>
+</div>
+<script type = "text/javascript" src="pop-iframe.js" async></script>
+
+
+<!-- <script>
+
+	window.addEventListener("click",function(){
+		window.console.log('loaded');
+		bruPop (".bru-poplink", null);
+
+	})
+
+</script> -->
+</body>
+</html>
