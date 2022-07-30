@@ -36,6 +36,9 @@ function bruPop (targetIdentifier, action){
 	let popBox = document.createElement('div');
 	popBox.classList.add("popup-box");
 
+	let popContent = document.createElement('div');
+	popContent.classList.add("popup-content");
+
 	let popFrame= document.createElement('iframe');
 	popFrame.style.cssText = 'width: 100%; height: 100%; border:0;';
 	popFrame.innerHTML = 'allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"';
@@ -68,10 +71,16 @@ function bruPop (targetIdentifier, action){
 		case "id:":
 		case "class:":
 
-		popContent =document.querySelector(targetContent);
+		bruContent = document.querySelector(targetContent);
+		popContent.appendChild(bruContent);
+
 		popBox.appendChild(popContent);
+		if(popContent.contains(bruContent))
+		bruContent.style.display = 'block';
+
+		window.console.log(bruContent);
 		break;
-		
+
 		//PopUp for MAPS
 		case "map-location:":
 
